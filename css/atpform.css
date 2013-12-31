@@ -1,0 +1,52 @@
+
+/* Copy the below code and past in your css file ------------------------------------- */
+
+#contactform 						{ width:auto; font:normal 11px/18px Verdana,Tahoma, Sans-serif; }
+#contactform form 					{ width:auto; margin:0; padding:20px; margin-top:20px; }
+
+#contactform fieldset 				{ padding:10px 0; margin:15px 0; background:#fff; border:1px solid #ddd; -moz-border-radius:5px }
+#contactform fieldset legend 		{ font:normal bold 18px/26px "Trebuchet MS",Verdana,Tahoma; padding:3px 25px; margin-left:30px; text-transform:uppercase; border:0px solid #ddd;}
+#contactform fieldset legend span 	{ font:normal 10px/18px Arial,Verdana,Tahoma; text-transform:uppercase; display:block; }
+
+#contactform form label 			{ display:block; float:left; width:150px; padding:6px 10px 0 0; margin:0px; text-align:right;}
+
+#contactform input.inpt, 
+#contactform textarea, 
+#contactform select 				{ margin-bottom: 9px !important; border:1px solid; background-color: #f5f5f5; border-color: #ccc #ddd #ddd #ccc; width: 65%; padding: 4px;}
+
+#contactform input.inpt, 
+#contactform textarea, 
+#contactform select 				{ -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px;	} /* This is css3 border radius, remove it if you want to use valid xhtml*/
+
+#contactform input.inpt:focus,
+#contactform select:focus,
+#contactform textarea:focus 		{ background:#fff; }
+
+#contactform br 					{ clear:left;}
+#contactform input.required 		{ background:#f5f5f5 url('images/required.gif') 99% 50% no-repeat;}
+
+#contactform input.btn				{ background:none; border:none;}
+
+#contactform #note {width:90%;margin:0 auto; }
+
+/* Error / Success / Notice ----------------------------------------------------------- */
+
+#contactform .notes					{ background:#f0f0f0; border:1px solid #b8b8b8; }
+#contactform .success				{ background:#ccfcd1; border:1px solid #60a400; }
+#contactform .error					{ background:#f9e3e3; border:1px solid #e79e9e; }
+#contactform .notice				{ background:#fcf0cc; border:1px solid #ecc735; }
+
+#contactform .notes,
+#contactform .notice,
+#contactform .success,
+#contactform .error					{ padding:10px; font-size:10px; color:#000;}
+
+#contactform .notes span,
+#contactform .notice span,
+#contactform .success span,
+#contactform .error span			{ font-weight:bold; font-size:1.2em;}
+
+#contactform .notes p,
+#contactform .success p,
+#contactform .error p,
+#contactform .notice p				{ margin:0px; padding:0px;}

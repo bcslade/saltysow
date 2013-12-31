@@ -1,0 +1,50 @@
+.fancyscroll-section {
+
+	width: 100%;
+}
+
+.fancyscroll-content {
+	position: absolute;
+	width: 730px;
+	left: 50%;
+	margin-left: -345px;
+	top: 200px;
+	z-index: 10;
+}
+
+.fancyscroll-background {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+
+
+.fancyscroll-topButton {
+	position: fixed;
+	font-family: 'GearedSlab', sans-serif;
+	text-transform:uppercase;
+	letter-spacing:1px;
+	font-size:16px;
+	display: block;
+	bottom: 15px;
+	right: 15px;
+	padding: 10px 10px 10px 11px;
+	color: #df5a37;
+	background: #eee;	
+	z-index: 20;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+	-webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+	-moz-box-shadow:1x 1px 3px rgba(0,0,0,0.4);
+}
+
+.fancyscroll-topButton:hover { 
+	color: #333;
+	text-decoration: none;
+}
+
+
+
+
+

@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	background:url(images/pink_paper_BKG.jpg);
+	background-repeat:repeat-z;
+	background-color:#B7A69D;
+	margin:0px;
+	padding:0px;
+}
+
+#header {
+	background-color:#000;
+	height:62px;
+	width: auto;
+	margin:45px 0px 0px 0px;
+	padding: 15px 0px 5px 30px;
+}
+
+#main {
+	font-family: DINMittelschrift-Alternate, Arial, Helvetica, sans-serif;
+	color:#000;
+	margin: 20px 0px 20px 30px;
+	padding:0px;
+	width:auto;
+	float:left;
+}
+
+@font-face {
+	font-family: DINMittelschrift-Alternate;
+	src: url('DINMittelschrift-Alternate.otf');
+}
+
+a {
+	color:#600;
+	text-decoration:none;
+}
+
+p {
+	width:250px;
+	height:100px;
+}

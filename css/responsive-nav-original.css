@@ -1,0 +1,736 @@
+/*! responsive-nav.js 1.0.25 by @viljamis */
+
+.nav-collapse {
+  background-color: #da5030;
+  height:100px;
+  width: 100%;
+  color:#e7e3da;
+  text-align:center;
+  display:block; 
+  z-index: 10; 
+}
+
+.nav-collapse #drawer-contents {
+	height:80px !important;
+	padding:20px 0 0 0;
+}
+
+.nav-collapse ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none;
+}
+
+.nav-collapse li {
+  width: 100%;
+  display: block;
+}
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+
+}
+
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+
+.nav-collapse.disable-pointer-events {
+  pointer-events: none !important;
+}
+
+.nav-toggle {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+
+/* DRAWER BLOCK STYLING */
+
+#drawer-block,
+#social-block {
+	border-right: 1px solid #c1452d;
+	line-height:50px;
+}
+
+#drawer-block, 
+#last-block {
+	font-family: "adobe-caslon-pro", serif;
+	font-size:15px;
+	line-height:50px;
+}
+
+.ie #drawer-block, 
+.ie #last-block,
+.gecko.win #drawer-block, 
+.gecko.win #last-block {
+	font-weight:600;
+}
+
+#drawer-block a, 
+#last-block a {
+	color:#e7e3da;
+	text-decoration:none;
+	opacity: 1;
+	transition: opacity .2s ease-out;
+		-moz-transition: opacity .2s ease-out;
+		-webkit-transition: opacity .2s ease-out;
+		-o-transition: opacity .2s ease-out;
+}
+
+#drawer-block a:hover, 
+#last-block a:hover {
+	opacity: .7;
+	text-decoration:none;
+}
+
+#drawer-block a:focus, 
+#last-block a:focus {
+	outline:none;
+}
+
+#social-block {
+	font-family: entypo;
+	text-align:center;
+}
+
+#social-block-facebook,
+#social-block-twitter,
+#social-block-instagram,
+#social-block-email {
+	position:relative;
+	float:left;
+	width:26px;
+	height:26px;
+	margin-right:25px !important;
+	background-size: 26px 26px;
+	border: 0;
+	margin-top:10px;
+	opacity: 1;
+		transition: opacity .2s ease-out;
+		-moz-transition: opacity .2s ease-out;
+		-webkit-transition: opacity .2s ease-out;
+		-o-transition: opacity .2s ease-out;
+}
+
+#social-block-facebook:hover,
+#social-block-twitter:hover,
+#social-block-instagram:hover,
+#social-block-email:hover {
+	opacity:.7;
+}
+
+#social-block-facebook:focus,
+#social-block-twitter:focus,
+#social-block-instagram:focus,
+#social-block-email:focus {
+	outline:none;
+}
+
+
+#social-block-facebook {
+	background-image: url(http://what.it.is/saltysow/beta/images/social-fb@2x.png);
+	background-repeat:no-repeat;
+	margin-left:40px;
+	margin-right:22px !important;
+}
+
+
+#social-block-twitter {
+	background-image: url(http://what.it.is/saltysow/beta/images/social-tw@2x.png);
+	background-repeat:no-repeat;
+	margin-right:27px !important;
+}
+
+
+#social-block-instagram {
+	background-image: url(http://what.it.is/saltysow/beta/images/social-in@2x.png);
+	background-repeat:no-repeat;
+	margin-right:25px !important;
+}
+
+#social-block-email {
+	background-image: url(http://what.it.is/saltysow/beta/images/social-em@2x.png);
+	background-repeat:no-repeat;
+	margin-right:25px !important;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1199px){
+
+#social-block-facebook {
+	margin-left:0px;
+	margin-right:17px !important;
+}
+
+#social-block-twitter {
+	margin-right:22px !important;
+}
+
+#social-block-instagram {
+	margin-right:20px !important;
+}
+
+#social-block-email {
+	margin-right:17px !important;
+}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px){
+
+#social-block-facebook {
+	margin-left:0px;
+	margin-right:12px !important;
+}
+
+#social-block-twitter {
+	margin-right:17px !important;
+}
+
+#social-block-instagram {
+	margin-right:15px !important;
+}
+
+#social-block-email {
+	margin-right:0px !important;
+}
+}
+
+
+@media screen and (min-width: 2000em) {
+  .js .nav-collapse {
+    position: relative;
+  }
+  .js .nav-collapse.closed {
+    max-height: none;
+  }
+  .nav-toggle {
+    display: none;
+  }
+}
+
+
+/* CAMPAIGN MONITOR FORM STYLING */
+
+.modal-content {
+	height:390px;
+	width:430px;
+	margin:20% auto;
+}
+
+.paypal.modal-content {
+	height: 475px !important;
+}
+
+.gecko .paypal.modal-content {
+	height: 485px !important;
+}
+
+.feedback.modal-content {
+	height: 600px !important;
+}
+
+.modal a.close {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  padding: 5px;
+  color: #9099A3;
+  font-size:30px;
+  text-decoration: none;
+}
+.modal a.close:hover {
+  color: #5d6670;
+}
+
+.modal h1 {
+  font-family: 'GearedSlab', sans-serif;
+  font-weight: 700;
+  color: #373c44;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  font-size: 35px;
+}
+.modal h2 {
+  font-size: 26px;
+  line-height: 1.0;
+  color: #716f6d;
+  font-family: "adobe-caslon-pro", serif;
+  font-weight: 300;
+  width: 100%;
+  border-bottom: 1px solid #ECEEF1;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  margin: 25px 0 10px 0px;
+}
+.modal #response {
+  float: left;
+  font: 14px "adobe-caslon-pro", serif;
+  font-size: 15px;
+  margin: 23px 0 0 0px;
+  padding: 10px 0 0 25px;
+  color: #404041;
+  background: url('../gfx/tick.png') left center no-repeat;
+  display: none;
+}
+
+.modal form#subForm button,
+.modal form#subForm input,
+.modal form button,
+.modal form input,
+.paypal-form input{
+  font-family: "adobe-caslon-pro", serif;
+  -khtml-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  margin: 0 0 20px 0;
+}
+.modal form#subForm input,
+.paypal-form input {
+  width: 378px;
+  border: 1px solid #cfd4db;
+  padding: 18px 10px 18px 12px;
+  font-size: 15px;
+  color: #716f6d;
+  margin: 15px 0 10px 25px !important;
+}
+
+.gecko .modal form#subForm input,
+.gecko .paypal-form input {
+  padding: 0 0 0 12px;
+  height:40px !important;
+}
+
+.modal form input.paypalsubmit {
+  width: 95px;
+  height:52px;
+  margin: 12px 0 10px 25px;
+  border:0;
+  padding:0;
+}
+
+.modal form#subForm input::-webkit-input-placeholder,
+.paypal-form input::-webkit-input-placeholder {
+  color: #c8ccd1;
+  padding-top:5px !important;
+}
+.modal form#subForm input::-moz-placeholder,
+.paypal-form input::-moz-placeholder {
+  color: #c8ccd1;
+  margin-left:12px !important;
+}
+
+.modal form#subForm input:-moz-placeholder,
+.paypal-form input:-moz-placeholder {
+  color: #c8ccd1;
+  margin-left:12px !important;
+}
+
+
+.modal form#subForm input:-ms-input-placeholder,
+.paypal-form input:-ms-input-placeholder {
+  color: #c8ccd1;
+  line-height:3px;
+}
+.modal form#subForm input:focus,
+.paypal-form input:focus {
+  border-color: #b1b9c6;
+  outline: none;
+}
+
+.ie9 .modal form#subForm input:focus,
+.ie9 .paypal-form input:focus {
+  border-color: #b1b9c6;
+  outline: none;
+}
+
+.modal form#subForm input:focus::-webkit-input-placeholder,
+.paypal-form input:focus::-webkit-input-placeholder  {
+  color: #acb3ba;
+}
+.modal form#subForm input:focus::-moz-placeholder,
+.paypal-form input:focus::-moz-placeholder {
+  color: #acb3ba;
+}
+.modal form#subForm input:focus:-moz-placeholder,
+.paypal-form input:focus:-moz-placeholder {
+  color: #acb3ba;
+}
+
+.modal form#subForm input:focus:-ms-input-placeholder,
+.paypal-form input:focus:-ms-input-placeholder {
+  border-color: transparent;
+  outline: none;
+}
+
+.modal form#subForm .checkboxes {
+  position:relative;
+  margin-top:10px;
+  height:75px;
+  width:100%;
+  border:0;
+  outline:none;
+}
+
+.modal form#subForm .checkboxes input {
+  display:inline;
+  float:left;
+  width:25px;
+  margin-top: 10px !important;
+  margin-left:25px;
+  position:relative;
+  border:0;
+  outline:none;
+}
+
+.gecko .modal form#subForm .checkboxes input {
+  margin-right:5px !important;
+  margin-top: 0px !important;
+}
+
+.modal form#subForm .checkboxes input:focus {
+  outline:none;
+  border:0;
+}
+
+
+.ie .modal form#subForm .checkboxes input {
+  margin-top:-9px;
+  margin-right:5px !important;
+  width:20px;
+  height:20px;
+  padding:3px;
+}
+
+.modal form#subForm .checkboxes label,
+.paypal-form label {
+    display: inline;
+	position:relative;
+    color: #454545;
+    text-align: left;
+	float:left;
+	color: #716f6d;
+    font: 14px "adobe-caslon-pro", serif;
+	padding-top:10px;
+	margin-right:15px;
+}
+
+.modal form#subForm .checkboxes label.selection,
+.modal form#subForm label.selection,
+.paypal-form label.selection {
+	width:100%;
+	margin-left:25px;
+}
+
+.paypal form .paypal-form select {  /* PAYPAL SPECIFIC SELECTOR STYLING */
+  -webkit-appearance: none;  
+  -moz-appearance: none; 
+  width: 378px;
+  font: 14px "adobe-caslon-pro", serif;
+  border: 1px solid #cfd4db;
+  padding: 10px 10px 5px 12px;
+  color: #716f6d;
+  margin: 2px 0 10px 25px;
+  background: url('http://what.it.is/saltysow/beta/images/dd-arrow.png')  no-repeat;
+  background-position: 344px 13px;
+  background-size: 22px 13px;
+  cursor: pointer;
+  	text-indent: 0.01px; /* A LITTLE FIREFOX LOVE */
+ 	text-overflow: "";
+}
+
+
+.modal form#subForm input.error {
+  background: url('../gfx/cross.png') right center no-repeat;
+  background-position: 372px center;
+  color: #df452c;
+}
+.modal form#subForm button {
+  float: left;
+  background: #d9502f;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  font-weight:500;
+  padding: 15px 20px 12px 20px;
+  cursor: pointer;
+  margin: 5px 0 20px 25px;
+}
+
+.ie .modal form#subForm button {
+  margin-top:10px;
+  margin-right:143px;
+}
+
+.modal form#subForm button:hover {
+  background: #df452c;
+}
+.modal form#subForm button:active,
+.modal form#subForm button:focus {
+  background: #d23920;
+  border-bottom: 0;
+  border-top: 2px solid #922c19;
+  outline: none;
+}
+
+@media (max-width: 420px) {
+
+  .modal-content {
+    margin: 60px auto;
+    height:370px;
+	width: 290px !important;
+	
+  }
+  .modal form#subForm a.close {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .modal form#subForm h1 {
+    line-height: 1;
+    margin-bottom: 30px;
+  }
+  
+  .modal h2 {
+  font-size: 22px;
+  line-height: 1.0;
+  color: #716f6d;
+  font-family: "adobe-caslon-pro", serif;
+  font-weight: 300;
+  width: 100%;
+  border-bottom: 1px solid #ECEEF1;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  margin: 25px 0 10px 0px;
+}
+  
+  .modal form#subForm input {
+	width:240px;
+  }
+  .modal form#subForm input.error {
+    background-position: 95% center;
+  }
+  .modal form#subForm button {
+    float: left;
+    width: 240px;
+    padding-left: 0;
+    padding-right: 0;
+	margin: 0 0 20px 25px;
+  }
+  .modal form#subForm #response {
+    font-size: 16px;
+    width: 100%;
+    margin: 20px 0 0 0;
+    padding: 0 0 22px 0;
+    text-align: center;
+    background-position: bottom center;
+  }
+  
+  .modal form#subForm .checkboxes {
+  position:relative;
+  margin-top:0px;
+  height:75px;
+  width:250px;
+  padding:0;
+  margin-left:25px;
+}
+
+.modal form#subForm .checkboxes input {
+  display:inline;
+  float:left;
+  width:15px;
+  margin: 0px 5px 5px 0px !important;
+  position:relative;
+  border:0;
+  outline:none;
+}
+
+.modal form#subForm .checkboxes label {
+  padding-top:10px;
+  font-size:12px;
+  margin-right:10px;
+}
+
+.modal form#subForm .checkboxes label.selection {
+	width:100%;
+	margin-left:0px;
+}
+
+}
+
+/* Feedback Form Specific Styles ----------------------------------------------------------- */
+
+#contactform br 					{ clear:left;}
+
+#contactform input {
+  width: 378px;
+  border: 1px solid #cfd4db;
+  padding: 18px 10px 18px 12px;
+  font-size: 15px;
+  color: #716f6d;
+  margin: 12px 0 10px 25px;
+}
+
+.gecko #contactform input {
+   padding: 0 0 0 12px;
+   height:40px !important;
+}
+
+
+#contactform input.answer {
+  margin: 0 0 10px 25px;
+  width: 78px !important;	
+}
+
+#contactform button.btn {
+  float: left;
+  width: 378px;
+  background: #d9502f;
+  border: none;
+  color: #fff !important;
+  font-size: 15px;
+  font-weight:500;
+  padding: 15px 20px 12px 20px;
+  cursor: pointer;
+  margin: 5px 0 10px 25px;
+}
+
+#contactform button.btn:hover {
+  background: #df452c;
+}
+
+#contactform button.btn:focus {
+  background: #df452c;
+  outline:none;
+}
+
+
+#contactform input::-webkit-input-placeholder,
+.paypal-form input::-webkit-input-placeholder  {
+  color: #c8ccd1;
+  padding-top:5px;
+}
+
+#contactform input::-moz-input-placeholder {
+  color: #c8ccd1;
+}
+
+#contactform input:-moz-input-placeholder {
+  color: #c8ccd1;
+}
+
+#contactform input:-ms-input-placeholder {
+  color: #c8ccd1;
+  line-height:3px;
+}
+
+#contactform input:focus:-ms-input-placeholder {
+  border-color: transparent;
+  outline: none;
+}
+
+#contactform select,
+.paypal-form select {  /* PAYPAL SPECIFIC SELECTOR STYLING */
+  -webkit-appearance: none;  
+  -moz-appearance: none; 
+  width: 378px;
+  font: 14px "adobe-caslon-pro", serif;
+  border: 1px solid #cfd4db;
+  padding: 10px 10px 5px 12px;
+  color: #716f6d;
+  margin: 2px 0 10px 25px;
+  background: url('http://what.it.is/saltysow/beta/images/dd-arrow.png')  no-repeat;
+  background-position: 344px 13px;
+  background-size: 22px 13px;
+  cursor: pointer;
+  	text-indent: 0.01px; /* A LITTLE FIREFOX LOVE */
+ 	text-overflow: "";
+}
+
+#contactform label,
+.paypal-form label {
+	width:100%;
+	margin-left:25px;
+}
+
+#contactform textarea {
+  width: 378px;
+  height:100px;
+  font: 14px "adobe-caslon-pro", serif;
+  border: 1px solid #cfd4db;
+  padding: 10px 10px 5px 12px;
+  color: #716f6d;
+  margin-left:25px;
+    -khtml-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+#contactform #note {
+  width:100%;
+  margin:0 25px 0 10px 25px !important; 
+  
+  }
+
+/* Error / Success / Notice ----------------------------------------------------------- */
+
+#contactform .notes		{ 
+  background:#f0f0f0; 
+  border:1px solid #b8b8b8; 
+  margin:0 25px 0 10px 25px !important; 
+  
+  }
+
+#contactform .success		{ 
+  background:#ccfcd1; 
+  border:1px solid #60a400; 
+  margin: 5px 25px 0px 25px;
+  
+  }
+#contactform .error	{ 
+  background:#f9e3e3; 
+  border:1px solid #e79e9e; 
+  margin: 5px 25px 0px 25px;
+  
+  }
+#contactform .notice		{ 
+  background:#fcf0cc; 
+  border:1px solid #ecc735; 
+  margin: 5px 25px 0px 25px;
+  }
+
+#contactform .notes,
+#contactform .notice,
+#contactform .success,
+#contactform .error					{ padding:12px; font-size:14px; color:#000;
+
+   line-height:1.3;
+   width: 378px;
+  -khtml-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+
+}
+
+#contactform .notes span,
+#contactform .notice span,
+#contactform .success span,
+#contactform .error span			{ font-weight:bold; font-size:1.2em;}
+
+.feedback #contactform .notes p,
+#contactform .success p,
+#contactform .error p,
+#contactform .notice p				{ margin:0px; padding:0 0 0 3px;}
